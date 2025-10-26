@@ -8,10 +8,12 @@
 
 
 
-## URLS:
+## URLs:
 
-- https://ghibliapi.vercel.app/#
+- https://ghibliapi.vercel.app/# (Link da API)
 
-- https://www.figma.com/design/luL7mMXpWyZjdEzp9BL5qQ/Projeto_filmes_DBC--c%C3%B3pia-?t=IDRNPmnkqLE0PW3q-0
+- https://www.figma.com/design/luL7mMXpWyZjdEzp9BL5qQ/GhibliAPP?node-id=0-1&t=05Ur5dLt8RNQfqUC-1 (Link do prototipo figma)
 
-- https://font.download/font/ghibli
+- https://font.download/font/ghibli (Link da fonte utilizada para estética da studios ghibli)
+
+- https://github.com/NicollasLems/GhibliAPP/wiki/Prot%C3%B3tipo (Link da wiki do repositório)
