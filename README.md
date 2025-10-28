@@ -2,7 +2,7 @@
 >[!Important]
  > `Projeto: Ghibli Wiki`
 >- Turma: 3°Mtec Desenvolvimento de Jogos Digitais.
->- Projeto: GhibliWIKI
+>- Projeto: Ghibli WIKI
 >- Dupla: Alex Campos e Nicollas Lemes
 >- Sobre: Repositório para a documentação do aplicativo mobile "Ghibli Wiki" que tem como objetivo utilizar a API "https://ghibliapi.vercel.app/#"
 >- Lista de links da wiki:
