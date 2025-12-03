@@ -1,8 +1,10 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:ghibliapi/films_table.dart';
 import 'package:ghibliapi/persons.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'firstpage.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
@@ -37,6 +39,10 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {  
+    Future<void> AdicionarURL(String url) async {
+  final Uri uri = Uri.parse(url);
+  launchUrl(uri);
+}
   Film? FilteredFilm;
   List<Film> Favoritefilms = [];
   List<Film> films = [];
@@ -77,10 +83,9 @@ Future<void> getFilm() async{
       'The Wind Rises',
       'Spirited Away',
     ];
-
-    setState(() {
+      if(FavoriteFilms.isNotEmpty){
       Favoritefilms = films.where((film) => FavoriteFilms.contains(film.title)).toList();
-    });
+      }
     });
     }  
      }
@@ -120,7 +125,7 @@ Future<void> getFilm() async{
           ),
 
           child: TextField(
-  onSubmitted: (String inputName) async {
+    onSubmitted: (String inputName) async {
     var filmFound = films.firstWhere(
     (film) => (film.title ?? '').toLowerCase() == inputName.toLowerCase(),
     );
@@ -154,9 +159,9 @@ Future<void> getFilm() async{
           SizedBox(
             height: 10,
           ),
-Visibility(
-  visible: Carousel,
-  child:
+          Visibility(
+            visible: Carousel,
+            child:
           Container(
             width: 300,
             height: 200,
@@ -332,7 +337,12 @@ Visibility(
                   Container(
                     width: 240,
                     height: 180,
-                    child: Image.network("${film.image}", fit: BoxFit.fill,),
+                    child: GestureDetector(
+                      onTap: (){
+                        //AdicionarURL(film.url ?? 'No Url'); 
+                      },
+                      child: Image.network("${film.image}", fit: BoxFit.fill,),
+                    ) 
               ),
                   Text(film.title ?? 'No Title', 
                   style: TextStyle(
@@ -359,13 +369,20 @@ Visibility(
         Visibility(
           visible: Carousel,
           child: SizedBox(
-              width: 300,
+            height: 50,
+              width: 200,
               child: GestureDetector(
-          onTap: (){
+          onTap: (){      
                   Navigator.push(context,
                   MaterialPageRoute(builder: (context) => CreditsPage()));
                   },
-          child: Text(
+          child: Container(
+            alignment: AlignmentDirectional.center,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(200),
+              color: const Color.fromARGB(122, 10, 35, 78)
+            ),
+            child: Text(
             "CRÉDITOS À API UTILIZADA",
              textAlign: TextAlign.center,
              style: TextStyle(
@@ -373,11 +390,10 @@ Visibility(
               color: Colors.blue,
               fontSize: 10,
              ),),
+          )
             ),
             )),
-            SizedBox(
-              height: 36
-            ),
+
             Visibility(
           visible: Carousel,
             child:
