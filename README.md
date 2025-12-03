@@ -2,9 +2,15 @@
 >[!Important]
  > `Projeto: Ghibli Wiki`
 >- Turma: 3°Mtec Desenvolvimento de Jogos Digitais.
->- Escola: Etec Prof. Basilides de Godoy.
->- Sobre: Repositório para a documentação do aplicativo mobile "Ghibli Wiki" que tem como objetivo utilizar a API "https://ghibliapi.vercel.app/#"
+>- Projeto: Ghibli WIKI
 >- Dupla: Alex Campos e Nicollas Lemes
+>- Sobre: Repositório para a documentação do aplicativo mobile "Ghibli Wiki" que tem como objetivo utilizar a API "https://ghibliapi.vercel.app/#"
+>- Lista de links da wiki:
+>   1. [Home](https://github.com/NicollasLems/GhibliAPP/wiki)<br>
+>   2. [Protótipo](https://github.com/NicollasLems/GhibliAPP/wiki/Prot%C3%B3tipo)<br>
+>   3. [Estúdio Ghibli API](https://github.com/NicollasLems/GhibliAPP/wiki/Est%C3%BAdio-Ghibli-API)
+>   4. [Codificação do Protótipo](https://github.com/NicollasLems/GhibliAPP/wiki/Codifica%C3%A7%C3%A3o)<br>
+
 
 
 
