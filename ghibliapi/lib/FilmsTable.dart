@@ -28,7 +28,7 @@ class _FilmsTable extends State<FilmsTable> {
    @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: IconButton(onPressed:() {
+      floatingActionButton: IconButton(onPressed:() async {
       Navigator.push(context,
       MaterialPageRoute(builder: (context) => FilmsPage()));
       }, icon: Icon(Icons.subdirectory_arrow_left_outlined, color: Colors.white,)),

@@ -57,7 +57,7 @@ class Home extends State<MyHomePage> {
 void initState(){
   super.initState();
   getFilm();
-  currentIndex = Favoritefilms.length;
+  currentIndex = 0;
 }
 
   Future<void> getFilm() async{
@@ -84,7 +84,7 @@ void initState(){
     ];
       if(FavoriteFilms.isNotEmpty){
       Favoritefilms = films.where((film) => FavoriteFilms.contains(film.title)).toList();
-      currentIndex = Favoritefilms.isNotEmpty ? 0 : 1;
+      currentIndex = Favoritefilms.isNotEmpty ? 0 : 0;
       }
     });
     }  
@@ -120,7 +120,7 @@ void initState(){
           child: TextField(
           onSubmitted: (String inputName) async {
           var filmFound = films.firstWhere(
-          (film) => (film.title ?? '').toLowerCase() == inputName.toLowerCase(),
+          (film) => (film.title ?? 'Spirited Away').toLowerCase() == inputName.toLowerCase(),
          );
            if (filmFound.title!.isEmpty){
            Carousel = true;
@@ -176,8 +176,8 @@ void initState(){
               activeSize: const Size(5,5),
               color: Colors.black,
               ),
-              dotsCount: Favoritefilms.length,
-              position: (currentIndex.clamp(0, Favoritefilms.length - 1)).toDouble(), // Garante que não ultrapasse do limite ao delimitar um período (valores) que serão passados para double depois.
+              dotsCount: Favoritefilms.length > 0 ? Favoritefilms.length : 5,
+              position: currentIndex.toDouble(),
             ),
             ],
             ),

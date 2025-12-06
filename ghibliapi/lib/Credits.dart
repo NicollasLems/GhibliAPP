@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:formattingapi/home.dart';
+import 'package:ghibliapi/home.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'methods.dart';
 void main() {
@@ -117,7 +117,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  IconButton(onPressed: (){
+                  IconButton(onPressed: () async{
                   Navigator.push(context,
                   MaterialPageRoute(builder: (context) => FilmsPage()));
                   }, icon: Icon(Icons.home, color: const Color.fromARGB(255, 255, 255, 255))),

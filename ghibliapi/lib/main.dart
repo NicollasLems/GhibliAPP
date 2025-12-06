@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:formattingapi/home.dart';
+import 'package:ghibliapi/home.dart';
 import 'dart:async';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
 import 'methods.dart';
@@ -32,7 +32,7 @@ class _StartPage extends State<StartPage> {
 
   @override
   Widget build(BuildContext context) {
-        void iniciar() {
+        void iniciar() async {
       Navigator.push(context, MaterialPageRoute(builder: (context) => MyHomePage(title: 'Ghibli Wiki',)),
       );
     }
